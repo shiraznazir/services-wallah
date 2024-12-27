@@ -2,7 +2,7 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/coder/Desktop/Projects/serviceswallah/customer-panel/src/app/page.tsx"],"sourcesContent":["import Image from \"next/image\";\n\nexport default function Home() {\n  return (\n    <div className=\"grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]\">\n      <h1>Hello World</h1>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGV"}},
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/coder/Desktop/Projects/serviceswallah/customer-panel/src/app/page.tsx"],"sourcesContent":["import Image from \"next/image\";\nimport Navbar from \"./components/Navbar\";\n\nexport default function Home() {\n  return (\n    <>\n      <div className=\"grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]\">\n        <Home />\n      </div>\n    </>\n  );\n}\n"],"names":[],"mappings":";;;;;AAGe,SAAS;IACtB,qBACE;kBACE,cAAA,8OAAC;YAAI,WAAU;sBACb,cAAA,8OAAC;;;;;;;;;;;AAIT"}},
     {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
     {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
     {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},

@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/coder/Desktop/Projects/serviceswallah/customer-panel/src/app/components/Navbar.tsx"],"sourcesContent":["import React from \"react\";\n\nconst Navbar = () => {\n  return <div>Navbar</div>;\n};\n\nexport default Navbar;\n"],"names":[],"mappings":";;;;;AAEA,MAAM,SAAS;IACb,qBAAO,6LAAC;kBAAI;;;;;;AACd;KAFM;uCAIS"}},
+    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 34, "column": 0}, "map": {"version":3,"sources":["file:///home/coder/Desktop/Projects/serviceswallah/customer-panel/src/app/page.tsx"],"sourcesContent":["\"use client\";\n\nimport Image from \"next/image\";\nimport Navbar from \"./components/Navbar\";\n\nexport default function Home() {\n  return (\n    <>\n      <div className=\"grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]\">\n        <Navbar />\n        <h1>Hello World</h1>\n      </div>\n    </>\n  );\n}\n"],"names":[],"mappings":";;;;AAGA;AAHA;;;AAKe,SAAS;IACtB,qBACE;kBACE,cAAA,6LAAC;YAAI,WAAU;;8BACb,6LAAC,sIAAA,CAAA,UAAM;;;;;8BACP,6LAAC;8BAAG;;;;;;;;;;;;;AAIZ;KATwB"}},
+    {"offset": {"line": 73, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
