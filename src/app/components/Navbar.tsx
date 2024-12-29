@@ -58,7 +58,13 @@ const Navbar = () => {
             : "bg-white px-2 pt-2 pb-10 rounded-lg text-black"
         }`}
       >
-        <Image width={100} height={100} src={logo} alt="logo" />
+        <Image
+          className="animate-slideIn"
+          width={100}
+          height={100}
+          src={logo}
+          alt="logo"
+        />
       </div>
       <MenubarDemo />
       <h1>
