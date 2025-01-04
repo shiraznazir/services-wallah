@@ -12,7 +12,7 @@ export default {
       animation: {
         fadeIn: "fadeIn 2s ease-in-out",
         bounceText: "bounceText 1s infinite",
-        zoomIn: "zoomIn 1s ease-in-out",
+        zoomIn: "zoomIn 2s ease-in-out",
         slideIn: "slideIn 1s ease-out",
       },
       keyframes: {
@@ -82,5 +82,8 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwind-scrollbar-hide"),
+  ],
 } satisfies Config;

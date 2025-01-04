@@ -2,74 +2,102 @@
 
 import React from "react";
 import logo from "@/assets/logo.png";
-import { ModeToggle } from "./ModeToggle";
-import {
-  Menubar,
-  MenubarCheckboxItem,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarRadioGroup,
-  MenubarRadioItem,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarSub,
-  MenubarSubContent,
-  MenubarSubTrigger,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
+import ModeToggle from "./ModeToggle";
 import Image from "next/image";
-import { useTheme } from "next-themes";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import Link from "next/link";
+
+const DropdownList = () => {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <div className="block md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 cursor-pointer"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-40">
+        <DropdownMenuItem asChild>
+          <Link href="/">Home</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/service">Services</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/about">About Us</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/contact">Contact Us</Link>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
 
 const MenubarDemo = () => {
   return (
-    <Menubar className="flex gap-10 p-2">
-      <MenubarMenu>
-        <MenubarTrigger className="font-bold">Homes</MenubarTrigger>
-      </MenubarMenu>
-      <MenubarMenu>
-        <MenubarTrigger className="font-bold">Services</MenubarTrigger>
-      </MenubarMenu>
-      <MenubarMenu>
-        <MenubarTrigger className="font-bold">About Us</MenubarTrigger>
-      </MenubarMenu>
-      <MenubarMenu>
-        <MenubarTrigger className="font-bold">Contact Us</MenubarTrigger>
-      </MenubarMenu>
-      {/* <MenubarMenu>
-        <MenubarTrigger>
-          {" "}
-          <ModeToggle />
-        </MenubarTrigger>
-      </MenubarMenu> */}
-    </Menubar>
+    <div className="hidden md:flex gap-10 p-2">
+          <Link href="/" className="font-bold">
+            Home
+          </Link>
+          <Link href="/service" className="font-bold">
+            Services
+          </Link>
+          <Link href="/about" className="font-bold">
+            About Us
+          </Link>
+          <Link href="/contact" className="font-bold">
+            Contact Us
+          </Link>
+          <Link href="/book-a-call" className="font-bold">
+            Enquiry
+          </Link>
+    </div>
   );
 };
 
 const Navbar = () => {
-  const theme = useTheme();
-
   return (
-    <div className="h-16 p-4 flex justify-between">
-      <div
-        className={`${
-          theme === "dark"
-            ? "bg-gray-900 text-white"
-            : "bg-white px-2 pt-2 pb-10 rounded-lg text-black"
-        }`}
-      >
+    <div
+      className={`bg-white dark:bg-gray-900 dark:text-white h-20 w-full fixed px-5 md:px-10 flex justify-between items-center shadow z-50`}
+    >
+      {/* Logo Section */}
+      <div className={`dark:bg-white dark:text-black rounded-lg p-2`}>
         <Image
           className="animate-slideIn"
           width={100}
           height={100}
           src={logo}
-          alt="logo"
+          alt="Company Logo"
+          priority
         />
       </div>
+
+      {/* Desktop Menu */}
       <MenubarDemo />
-      <h1>
+
+      {/* Mobile Menu and Additional Controls */}
+      <div className="flex items-center gap-5">
+        <DropdownList />
         <ModeToggle />
-      </h1>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/coder/Desktop/services-wallah/src/app/book-a-call/page.tsx"],"sourcesContent":["\"use client\";\n\nimport { z } from \"zod\"\nimport React from \"react\";\n\nconst formSchema = z.object({\n    username: z.string().min(2).max(50),\n  })\n\nconst BookACall = () => {\n  return (\n    <div className=\"px-10 py-5\">\n      <FormField\n        control={form.control}\n        name=\"username\"\n        render={({ field }) => (\n          <FormItem>\n            <FormLabel>Username</FormLabel>\n            <FormControl>\n              <Input placeholder=\"shadcn\" {...field} />\n            </FormControl>\n            <FormDescription>This is your public display name.</FormDescription>\n            <FormMessage />\n          </FormItem>\n        )}\n      />\n    </div>\n  );\n};\n\nexport default BookACall;\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAKA,MAAM,aAAa,uIAAA,CAAA,IAAC,CAAC,MAAM,CAAC;IACxB,UAAU,uIAAA,CAAA,IAAC,CAAC,MAAM,GAAG,GAAG,CAAC,GAAG,GAAG,CAAC;AAClC;AAEF,MAAM,YAAY;IAChB,qBACE,6LAAC;QAAI,WAAU;kBACb,cAAA,6LAAC;YACC,SAAS,KAAK,OAAO;YACrB,MAAK;YACL,QAAQ,CAAC,EAAE,KAAK,EAAE,iBAChB,6LAAC;;sCACC,6LAAC;sCAAU;;;;;;sCACX,6LAAC;sCACC,cAAA,6LAAC;gCAAM,aAAY;gCAAU,GAAG,KAAK;;;;;;;;;;;sCAEvC,6LAAC;sCAAgB;;;;;;sCACjB,6LAAC;;;;;;;;;;;;;;;;;;;;;AAMb;KAnBM;uCAqBS"}},
+    {"offset": {"line": 83, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
