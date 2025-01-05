@@ -1,25 +1,20 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { useRouter } from "next/navigation"; // Correct import for Next.js routing
+import { useRouter } from "next/navigation";
 import ServicesCard from "@/app/components/ServicesCard";
-import img1 from "@/assets/s1.png";
-import img2 from "@/assets/s2.png";
-import img3 from "@/assets/s3.png";
-import img4 from "@/assets/s4.png";
-import { StaticImageData } from "next/image";
 
 interface Service {
   title: string;
-  img: StaticImageData;
+  img: string; // Use string for public folder paths
 }
 
 const services: Service[] = [
-  { title: "Installation", img: img1 },
-  { title: "Maintenance", img: img2 },
-  { title: "Repair", img: img3 },
-  { title: "Consultation", img: img4 },
-  { title: "AMC", img: img4 },
+  { title: "Installation", img: "/images/s1.png" },
+  { title: "Maintenance", img: "/images/s2.png" },
+  { title: "Repair", img: "/images/s3.png" },
+  { title: "Consultation", img: "/images/s4.png" },
+  { title: "AMC", img: "/images/s4.png" },
 ];
 
 const Services: React.FC = () => {
@@ -29,7 +24,7 @@ const Services: React.FC = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
-  // Dragging Handlers
+  // Drag Handlers
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
     setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
@@ -43,11 +38,9 @@ const Services: React.FC = () => {
     scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  const handleMouseUp = () => setIsDragging(false);
 
-  // Scroll Button Handlers
+  // Scroll Handlers
   const handleScrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
@@ -60,9 +53,9 @@ const Services: React.FC = () => {
     }
   };
 
-  // Navigate and Scroll to Section
+  // Navigation Handler
   const handleNavigation = (title: string) => {
-    router.push("/service"); // Navigate to the service page
+    router.push("/service");
     setTimeout(() => {
       const destinationDiv = document.getElementById(title);
       if (destinationDiv) {

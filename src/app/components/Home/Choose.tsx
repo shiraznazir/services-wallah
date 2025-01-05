@@ -1,42 +1,41 @@
 "use client";
 import React from "react";
-import engImg from "@/assets/engineer.jpeg";
 import CustomCard from "@/app/components/CustomCard";
 
 const data = [
   {
     title: "Experienced Engineers",
-    img: engImg,
+    img: "/images/engineer.jpeg",
     description:
       "Our certified professionals have years of experience installing all types of air conditioning systems, including split, window, and central AC units.",
   },
   {
     title: "Customized Solutions",
-    img: engImg,
+    img: "/images/engineer.jpeg",
     description:
       "We understand that every space is unique. Our team assesses your space to recommend and install the perfect air conditioning solution tailored to your needs.",
   },
   {
     title: "Affordable Pricing",
-    img: engImg,
+    img: "/images/engineer.jpeg",
     description:
       "We offer competitive rates without compromising on quality. Transparency in pricing ensures you get value for every rupee spent.",
   },
   {
     title: "Energy-Efficient Installation",
-    img: engImg,
+    img: "/images/engineer.jpeg",
     description:
       "Proper installation is key to reducing energy consumption. Our experts ensure your system is set up for optimal performance, saving you money on electricity bills.",
   },
   {
     title: "Quick and Hassle-Free Service",
-    img: engImg,
+    img: "/images/engineer.jpeg",
     description:
       "From consultation to installation, we handle every step with precision and care, ensuring minimal disruption to your daily routine.",
   },
   {
     title: "Customer-Centric Approach",
-    img: engImg,
+    img: "/images/engineer.jpeg",
     description:
       "We prioritize your needs and are committed to delivering personalized solutions and exceptional service."
   },

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/coder/Desktop/services-wallah/src/app/service/page.tsx"],"sourcesContent":["\"use client\";\nimport React from 'react'\n\nconst Services = () => {\n  return (\n    <div className='px-10 py-5'>\n        <h1>Services</h1>\n    </div>\n  )\n}\n\nexport default Services"],"names":[],"mappings":";;;;AAAA;;AAGA,MAAM,WAAW;IACf,qBACE,6LAAC;QAAI,WAAU;kBACX,cAAA,6LAAC;sBAAG;;;;;;;;;;;AAGZ;KANM;uCAQS"}},
-    {"offset": {"line": 36, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

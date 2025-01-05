@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/coder/Desktop/services-wallah/src/app/contact/page.tsx"],"sourcesContent":[" \"use client\";\n \nimport React from 'react'\n\nconst Contact = () => {\n  return (\n    <div className='px-10 py-5'>\n        <h1>\n            Contact Us\n        </h1>\n    </div>\n  )\n}\n\nexport default Contact"],"names":[],"mappings":";;;;AAAC;;AAID,MAAM,UAAU;IACd,qBACE,8OAAC;QAAI,WAAU;kBACX,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAKZ;uCAEe"}},
-    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}

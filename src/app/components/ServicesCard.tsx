@@ -6,7 +6,7 @@ import { StaticImageData } from "next/image";
 
 interface ServicesCardProps {
   title: string;
-  img: StaticImageData;
+  img: string | StaticImageData;
   onClick: ()=> void;
 }
 

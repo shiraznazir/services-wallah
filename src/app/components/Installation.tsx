@@ -1,14 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
-import installImag from "@/assets/installation.jpeg";
-import BreadCrumbComp from "./BreadCrumbComp";
 
 const Installation = () => {
   return (
     <section id="installation" className="text-center">
-      <BreadCrumbComp title="Home" subTitle="Services" />
       {/* Uncomment if image should be used
       <Image
         className="animate-zoomIn hover:animate-zoomIn cursor-pointer rounded-lg shadow-lg"
@@ -21,12 +17,13 @@ const Installation = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="p-4 flex justify-center items-center">
           <video
-            className="w-full max-w-md mx-auto"
+            className="w-full mx-auto"
             controls
             preload="metadata"
+            autoPlay
             aria-label="Installation process video"
           >
-            {/* <source src={videoClip} type="video/mp4" /> */}
+            <source src={"/videos/maintenance.mp4"} type="video/mp4" />
             <track
               src="/path/to/captions.vtt"
               kind="subtitles"

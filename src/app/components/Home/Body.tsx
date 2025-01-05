@@ -1,26 +1,22 @@
 "use client";
 
-import React, { useEffect } from "react";
-import img1 from "@/assets/a1.jpeg";
-import img2 from "@/assets/a2.jpeg";
-import img4 from "@/assets/a4.jpeg";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
+import BookACall from "@/app/components/BookACall";
 
-const Body = () => {
-  const { setTheme } = useTheme()
+const Body: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  useEffect(()=>{
-    setTheme("system");
-  },[])
+  const onClose = () => {
+    setIsOpen(false);
+  };
 
   return (
     <div className="px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Left Section */}
-      <div className="h-full flex justify-center items-center">
+      <div className="pt-20 md:h-screen flex justify-center items-center">
         <div className="flex flex-col font-bold text-xl text-center md:text-left">
           <motion.h1
             className="text-3xl md:text-4xl font-bold"
@@ -43,60 +39,75 @@ const Body = () => {
               </span>
             </div>
           </motion.h1>
-          <Link href={"tel:+919837305499"}>
-            <Button
-              className="animate-slideIn my-6 w-3/4 md:w-2/5 font-bold mx-auto md:mx-0"
-              variant="outline"
-            >
-              Book A Call
-            </Button>
-          </Link>
+          <Button
+            className="animate-slideIn my-6 w-3/4 md:w-2/5 font-bold mx-auto md:mx-0"
+            variant="outline"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            Book A Call
+          </Button>
         </div>
       </div>
 
       {/* Right Section */}
-      <div className="grid grid-rows-6 grid-cols-6 gap-3 max-h-screen pt-10">
-        <div className="animate-zoomIn row-span-5 col-span-3">
+      <div className="hidden md:grid grid-rows-6 grid-cols-6 gap-3 h-screen pt-10">
+        {/* Main Image */}
+        <div className="relative animate-zoomIn row-span-5 col-span-3">
           <Image
-            className="w-full h-full object-cover rounded-l-xl"
-            src={img1}
-            alt="Image 1"
+            className="rounded-l-xl"
+            layout="fill"
+            src="/images/a1.jpeg"
+            alt="Main air conditioning service image"
           />
         </div>
-        <div className="animate-slideIn row-span-3 col-span-3">
+        {/* Top Right Image */}
+        <div className="relative animate-slideIn row-span-3 col-span-3">
           <Image
-            className="w-full h-full object-cover rounded-tr-xl"
-            src={img2}
-            alt="Image 2"
+            className="rounded-tr-xl"
+            layout="fill"
+            src="/images/a2.jpeg"
+            alt="Air conditioning installation image"
           />
         </div>
-        <div className="animate-zoomIn row-span-2 col-span-3">
+        {/* Bottom Right Image */}
+        <div className="relative animate-zoomIn row-span-2 col-span-3">
           <Image
-            className="w-full h-full object-cover rounded-br-xl"
-            src={img4}
-            alt="Image 3"
+            className="rounded-br-xl"
+            layout="fill"
+            src="/images/a3.jpeg"
+            alt="Air conditioning maintenance image"
           />
         </div>
       </div>
 
       {/* Mobile Images Section */}
       <div className="grid md:hidden grid-cols-2 gap-4">
-        <Image
-          className="w-full h-full object-cover rounded-xl"
-          src={img1}
-          alt="Image 1"
-        />
-        <Image
-          className="w-full h-full object-cover rounded-xl"
-          src={img2}
-          alt="Image 2"
-        />
-        <Image
-          className="w-full h-full object-cover rounded-xl col-span-2"
-          src={img4}
-          alt="Image 3"
-        />
+        <div className="relative w-full h-40">
+          <Image
+            className="rounded-xl"
+            layout="fill"
+            src="/images/a1.jpeg"
+            alt="Mobile air conditioning service image 1"
+          />
+        </div>
+        <div className="relative w-full h-40">
+          <Image
+            className="rounded-xl"
+            layout="fill"
+            src="/images/a2.jpeg"
+            alt="Mobile air conditioning service image 2"
+          />
+        </div>
+        <div className="relative w-full h-48 col-span-2">
+          <Image
+            className="rounded-xl"
+            layout="fill"
+            src="/images/a3.jpeg"
+            alt="Mobile air conditioning service image 3"
+          />
+        </div>
       </div>
+      <BookACall isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };

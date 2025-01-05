@@ -1,26 +1,27 @@
 "use client";
 import React from "react";
-import logo from "/images/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
-
   return (
     <div className="px-10">
       <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
-      
+
       <div className="py-5">
-        <div
-          className={`dark:bg-white rounded-lg dark:text-black p-2 w-32 mb-8`}
-        >
-          <Image
-            className="animate-slideIn"
-            width={100}
-            height={100}
-            src={logo}
-            alt="logo"
-          />
-        </div>
+        <Link href="/">
+          <div
+            className={`dark:bg-white rounded-lg dark:text-black p-2 w-32 mb-8`}
+          >
+            <Image
+              className="animate-slideIn"
+              width={100}
+              height={100}
+              src={"/images/logo.png"}
+              alt="logo"
+            />
+          </div>
+        </Link>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center md:text-left">
           {/* Company Section */}

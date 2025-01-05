@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import logo from "@/assets/logo.png";
+import React, { useState } from "react";
 import ModeToggle from "./ModeToggle";
 import Image from "next/image";
 import {
@@ -11,6 +10,7 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
+import BookACall from "./BookACall";
 
 const DropdownList = () => {
   return (
@@ -52,6 +52,13 @@ const DropdownList = () => {
 };
 
 const MenubarDemo = () => {
+  
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const onClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="hidden md:flex gap-10 p-2">
           <Link href="/" className="font-bold">
@@ -66,9 +73,10 @@ const MenubarDemo = () => {
           <Link href="/contact" className="font-bold">
             Contact Us
           </Link>
-          <Link href="/book-a-call" className="font-bold">
+          <div onClick={()=>setIsOpen(!isOpen)} className="cursor-pointer font-bold">
             Enquiry
-          </Link>
+          </div>
+          <BookACall isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };
@@ -79,16 +87,17 @@ const Navbar = () => {
       className={`bg-white dark:bg-gray-900 dark:text-white h-20 w-full fixed px-5 md:px-10 flex justify-between items-center shadow z-50`}
     >
       {/* Logo Section */}
+      <Link href={"/"}>
       <div className={`dark:bg-white dark:text-black rounded-lg p-2`}>
         <Image
           className="animate-slideIn"
           width={100}
           height={100}
-          src={logo}
+          src={"/images/logo.png"}
           alt="Company Logo"
           priority
         />
-      </div>
+      </div></Link>
 
       {/* Desktop Menu */}
       <MenubarDemo />
