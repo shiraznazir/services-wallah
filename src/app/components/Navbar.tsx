@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import ModeToggle from "./ModeToggle";
-import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuTrigger,

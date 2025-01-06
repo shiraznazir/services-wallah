@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useTheme } from "next-themes"; 
 import Body from "@/app/components/Home/Body";
 import Choose from "@/app/components/Home/Choose";
 import Services from "@/app/components/Home/Services";
 
 const Home = () => {
-  const { theme } = useTheme(); 
   const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {

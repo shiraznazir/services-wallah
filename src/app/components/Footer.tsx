@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import VenderEquiry from "./VenderEquiry";
 import Logo from "./Logo";
