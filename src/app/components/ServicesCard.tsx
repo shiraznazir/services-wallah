@@ -7,14 +7,27 @@ import { StaticImageData } from "next/image";
 interface ServicesCardProps {
   title: string;
   img: string | StaticImageData;
-  onClick: ()=> void;
+  onClick: () => void;
 }
 
 const ServicesCard: React.FC<ServicesCardProps> = ({ title, img, onClick }) => {
   return (
-    <div onClick={onClick} className="border-2 cursor-pointer hover:border-gray-100  p-4 rounded-lg">
-      <h1 className="py-3 font-bold text-lg">{title}</h1>
-      <Image className="rounded-lg animate-zoomIn hover:animate-in" width={400} height={400} src={img} alt={title} />
+    <div
+      onClick={onClick}
+      className="border cursor-pointer border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 p-4 rounded-lg transition-colors duration-200"
+    >
+      <h1 className="py-3 font-bold text-lg text-gray-800 dark:text-gray-200">
+        {title}
+      </h1>
+      <div className="relative w-full aspect-square">
+        <Image
+          className="rounded-lg animate-zoomIn"
+          src={img}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
     </div>
   );
 };

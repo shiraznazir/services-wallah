@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/coder/Desktop/services-wallah/src/app/page.tsx"],"sourcesContent":["\"use client\";\n\nimport React, { useEffect, useState } from \"react\";\nimport { useTheme } from \"next-themes\"; \nimport Body from \"@/app/components/Home/Body\";\nimport Choose from \"@/app/components/Home/Choose\";\nimport Services from \"@/app/components/Home/Services\";\n\nconst Home = () => {\n  const { theme } = useTheme(); \n  const [mounted, setMounted] = useState<boolean>(false);\n\n  useEffect(() => {\n    setMounted(true);\n  }, []);\n  \n\n  if (!mounted) return null; \n\n  return (\n    <div className={`px-10`}>\n      {/* <Body /> */}\n      {/* <Services /> */}\n      {/* <Choose /> */}\n    </div>\n  )\n}\n\nexport default Home;"],"names":[],"mappings":";;;;AAEA;AACA;AAHA;;;;AAQA,MAAM,OAAO;IACX,MAAM,EAAE,KAAK,EAAE,GAAG,CAAA,GAAA,gJAAA,CAAA,WAAQ,AAAD;IACzB,MAAM,CAAC,SAAS,WAAW,GAAG,CAAA,GAAA,qMAAA,CAAA,WAAQ,AAAD,EAAW;IAEhD,CAAA,GAAA,qMAAA,CAAA,YAAS,AAAD,EAAE;QACR,WAAW;IACb,GAAG,EAAE;IAGL,IAAI,CAAC,SAAS,OAAO;IAErB,qBACE,8OAAC;QAAI,WAAW,CAAC,KAAK,CAAC;;;;;;AAM3B;uCAEe"}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

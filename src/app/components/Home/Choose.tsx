@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import CustomCard from "@/app/components/CustomCard";
 
@@ -37,63 +38,40 @@ const data = [
     title: "Customer-Centric Approach",
     img: "/images/engineer.jpeg",
     description:
-      "We prioritize your needs and are committed to delivering personalized solutions and exceptional service."
+      "We prioritize your needs and are committed to delivering personalized solutions and exceptional service.",
   },
 ];
 
 const Choose = () => {
   return (
-    <section className="my-20 py-10 px-4 text-center">
-      <h1 className="pt-4 pb-2 text-4xl font-bold animate-slideIn md:text-5xl">
-        Why Choose Us?
-      </h1>
-      <p className="py-2 pb-8 text-sm md:text-base">
-        At <span className="font-bold">Services Wallah</span>, we specialize in
-        providing seamless and efficient air conditioning installation services
-        for homes, offices, and commercial spaces.
-        <br /> Our expert team ensures every installation meets the highest
-        standards of <span className="font-bold">quality, reliability,</span>
-        and <span className="font-bold">energy</span> efficiency.
-      </p>
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-12">
-        {data?.map((element, index) => (
-          <CustomCard
-            key={index}
-            title={element.title}
-            description={element.description}
-            img={element.img}
-          />
-        ))}
+    <section id="Choose" className="">
+      <div className="py-5 px-4 text-center">
+        <h1 className="pt-4 pb-2 text-3xl font-bold animate-slideIn md:text-4xl lg:text-5xl">
+          Why Choose Service Walah?
+        </h1>
+        <p className="py-2 pb-8 text-sm md:text-base">
+          At <span className="font-bold">Service Walah</span>, we specialize in
+          providing seamless and efficient air conditioning installation
+          services for homes, offices, and commercial spaces.
+          <br /> Our expert team ensures every installation meets the highest
+          standards of <span className="font-bold">
+            quality, reliability,
+          </span>{" "}
+          and <span className="font-bold">energy efficiency.</span>
+        </p>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
+          {data?.map((element, index) => (
+            <CustomCard
+              key={index}
+              title={element.title}
+              description={element.description}
+              img={element.img}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
 export default Choose;
-
-
-{/* <Card className="shadow-2xl cursor-pointer transition-transform hover:scale-105">
-<CardHeader className="text-center">
-  <CardTitle className="text-md sm:text-lg md:text-xl lg:text-2xl font-bold animate-fadeIn">
-    {title}
-  </CardTitle>
-</CardHeader>
-<CardContent>
-  {img && (
-    <div className="overflow-hidden rounded-t-lg">
-      <Image
-        src={img}
-        alt={title || "Card image"}
-        width={500}
-        height={300}
-        className="w-full h-auto object-cover animate-zoomIn"
-      />
-    </div>
-  )}
-</CardContent>
-<CardFooter className="text-center">
-  <CardDescription className="text-sm sm:text-base md:text-sm lg:text-lg animate-fadeIn">
-    {description}
-  </CardDescription>
-</CardFooter>
-</Card> */}

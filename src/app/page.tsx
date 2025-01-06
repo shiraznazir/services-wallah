@@ -18,7 +18,7 @@ const Home = () => {
   if (!mounted) return null; 
 
   return (
-    <div className={`${theme === "dark" ? "bg-gray-800" : "bg-white"} px-10`}>
+    <div className={`px-10`}>
       <Body />
       <Services />
       <Choose />

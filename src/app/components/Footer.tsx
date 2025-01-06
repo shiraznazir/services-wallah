@@ -1,34 +1,35 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import VenderEquiry from "./VenderEquiry";
+import Logo from "./Logo";
 
 const Footer = () => {
+  
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  
+  const handleRegisterClick = () => {
+    setIsOpen(true);
+  };
+
+  const onClose = () => {
+    setIsOpen(false);
+  }
+  
   return (
-    <div className="px-10">
+    <section className="px-10">
       <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
 
-      <div className="py-5">
-        <Link href="/">
-          <div
-            className={`dark:bg-white rounded-lg dark:text-black p-2 w-32 mb-8`}
-          >
-            <Image
-              className="animate-slideIn"
-              width={100}
-              height={100}
-              src={"/images/logo.png"}
-              alt="logo"
-            />
-          </div>
-        </Link>
+      <div className="py-5 flex md:block flex-col justify-center items-center">
+        <Logo />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center md:text-left">
           {/* Company Section */}
           <div>
             <h1 className="font-bold text-xl">Company</h1>
             <ul className="py-4 space-y-2 font-thin cursor-pointer">
-              <li>About Us</li>
+              <li><Link href={"/about"} >About Us</Link></li>
               <li>Terms & conditions</li>
               <li>Privacy policy</li>
               <li>Anti-discrimination policy</li>
@@ -44,7 +45,7 @@ const Footer = () => {
               <li>SW reviews </li>
               <li>Categories near you </li>
               <li>Blog</li>
-              <li>Contact us </li>
+              <li><Link href={"/contact"}>Contact us</Link></li>
             </ul>
           </div>
 
@@ -52,7 +53,7 @@ const Footer = () => {
           <div>
             <h1 className="font-bold text-xl">For Partners</h1>
             <ul className="py-4 space-y-2 font-thin cursor-pointer">
-              <li>Register as a professional</li>
+              <li onClick={handleRegisterClick} >Register as a professional</li>
             </ul>
           </div>
 
@@ -136,8 +137,9 @@ const Footer = () => {
         <p className="text-sm font-mono text-center">
           © Copyright 2025 Service Walah. All rights reserved.
         </p>
+        <VenderEquiry isOpen={isOpen} onClose={onClose} />
       </div>
-    </div>
+    </section>
   );
 };
 

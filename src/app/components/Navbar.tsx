@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import BookACall from "./BookACall";
+import Logo from "./Logo";
 
 const DropdownList = () => {
   return (
@@ -87,7 +88,8 @@ const Navbar = () => {
       className={`bg-white dark:bg-gray-900 dark:text-white h-20 w-full fixed px-5 md:px-10 flex justify-between items-center shadow z-50`}
     >
       {/* Logo Section */}
-      <Link href={"/"}>
+      <Logo />
+      {/* <Link href={"/"}>
       <div className={`dark:bg-white dark:text-black rounded-lg p-2`}>
         <Image
           className="animate-slideIn"
@@ -97,7 +99,7 @@ const Navbar = () => {
           alt="Company Logo"
           priority
         />
-      </div></Link>
+      </div></Link> */}
 
       {/* Desktop Menu */}
       <MenubarDemo />

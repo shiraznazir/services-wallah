@@ -17,13 +17,16 @@ const formSchema = z.object({
     .max(50, { message: "Name must not exceed 50 characters." }),
   email: z
     .string()
-    .email({ message: "Invalid email address." })
-    .nonempty({ message: "Email is required." }),
+    .email({ message: "Invalid email address." }),
   mobile: z
     .string()
     .regex(/^\d{10}$/, { message: "Mobile number must be 10 digits." })
     .nonempty({ message: "Mobile number is required." }),
   message: z.string().nonempty({ message: "Message is required." }),
+  pincode: z
+    .string()
+    .regex(/^\d{6}$/, { message: "Pincode must be 6 digits." })
+    .nonempty({ message: "Pincode is required." }),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -67,6 +70,7 @@ const ContactForm = () => {
       name: "",
       email: "",
       mobile: "",
+      pincode: "",
       message: "",
     },
   });
@@ -85,6 +89,7 @@ const ContactForm = () => {
           <InputField name="name" label="Full Name" />
           <InputField name="email" label="Email Address" />
           <InputField name="mobile" label="Mobile Number" />
+          <InputField name="pincode" label="Pincode" />
           <div className="form-item mb-4">
             <Label htmlFor="message" className="block text-sm font-medium mb-1">
               Your Message

@@ -6,7 +6,7 @@ import ServicesCard from "@/app/components/ServicesCard";
 
 interface Service {
   title: string;
-  img: string; // Use string for public folder paths
+  img: string; 
 }
 
 const services: Service[] = [
@@ -56,6 +56,7 @@ const Services: React.FC = () => {
   // Navigation Handler
   const handleNavigation = (title: string) => {
     router.push("/service");
+    
     setTimeout(() => {
       const destinationDiv = document.getElementById(title);
       if (destinationDiv) {
@@ -70,10 +71,10 @@ const Services: React.FC = () => {
       <h1 className="py-8 text-5xl font-bold animate-slideIn">Our Services</h1>
 
       {/* Scroll Buttons */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
-        <button
+      <div className="absolute left-[-20px] bottom-20 transform -translate-y-1/2 z-10">
+        <div
           onClick={handleScrollLeft}
-          className="bg-gray-200 rounded-full p-2 shadow hover:bg-gray-300"
+          className="rounded-full p-2 cursor-pointer"
           aria-label="Scroll Left"
         >
           <svg
@@ -90,13 +91,13 @@ const Services: React.FC = () => {
               d="M15.75 19.5 8.25 12l7.5-7.5"
             />
           </svg>
-        </button>
+        </div>
       </div>
 
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
-        <button
+      <div className="absolute right-[-10px] bottom-20 transform -translate-y-1/2 z-10">
+        <div
           onClick={handleScrollRight}
-          className="bg-gray-200 rounded-full p-2 shadow hover:bg-gray-300"
+          className="cursor-pointer rounded-full p-2"
           aria-label="Scroll Right"
         >
           <svg
@@ -113,7 +114,7 @@ const Services: React.FC = () => {
               d="m8.25 4.5 7.5 7.5-7.5 7.5"
             />
           </svg>
-        </button>
+        </div>
       </div>
 
       {/* Scrollable Services */}

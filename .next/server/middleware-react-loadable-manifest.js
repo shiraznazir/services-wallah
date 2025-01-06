@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"app/components/FooterSSR.tsx -> ./Footer":{"id":8994,"files":["static/chunks/994.8ac8577f09a25668.js"]}}';
+self.__REACT_LOADABLE_MANIFEST="{}"

@@ -4,26 +4,16 @@ import React from "react";
 
 const Installation = () => {
   return (
-    <section id="installation" className="text-center">
-      {/* Uncomment if image should be used
-      <Image
-        className="animate-zoomIn hover:animate-zoomIn cursor-pointer rounded-lg shadow-lg"
-        width={500}
-        height={500}
-        src={installImag}
-        alt="Air conditioning installation process"
-        priority
-      /> */}
+    <section id="Installation" className="text-center py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="p-4 flex justify-center items-center">
           <video
             className="w-full mx-auto"
             controls
             preload="metadata"
-            autoPlay
             aria-label="Installation process video"
           >
-            <source src={"/videos/maintenance.mp4"} type="video/mp4" />
+            <source src={"/videos/Installation.mp4"} type="video/mp4" />
             <track
               src="/path/to/captions.vtt"
               kind="subtitles"
@@ -38,24 +28,43 @@ const Installation = () => {
             <h2 className="text-3xl font-bold mb-4 animate-slideIn">
               Our Installation Process
             </h2>
-            <ul className="space-y-2 list-disc list-inside font-bold animate-slideIn">
-              <li>Consultation and Assessment</li>
-              <li>System Selection</li>
-              <li>Professional Installation</li>
-              <li>System Testing</li>
-              <li>Post-Installation Support</li>
-            </ul>
-          </div>
-          <div className="mt-16">
-            <h2 className="text-3xl font-bold mb-4 animate-slideIn">
-              Types of Air Conditioners We Install
-            </h2>
-            <ul className="space-y-2 list-disc list-inside font-bold animate-slideIn">
-              <li>Split Air Conditioners</li>
-              <li>Window Air Conditioners</li>
-              <li>Central Air Conditioning Systems</li>
-              <li>Cassette Air Conditioners</li>
-              <li>Ductable Air Conditioners</li>
+            <ul className="space-y-2 list-disc list-inside animate-slideIn">
+              <li>
+                <span className="font-bold">
+                  Consultation and Assessment :
+                </span>
+                Our experts will visit your location to understand your needs
+                and assess the space for optimal cooling solutions.
+              </li>
+              <li>
+                {" "}
+                <span className="font-bold">System Selection : </span> Based on
+                your requirements and budget, we guide you in selecting the most
+                suitable air conditioning system.
+              </li>
+              <li>
+                {" "}
+                <span className="font-bold">
+                  Professional Installation :{" "}
+                </span>{" "}
+                Our certified technicians ensure a precise and efficient
+                installation, adhering to industry standards and safety
+                protocols.
+              </li>
+              <li>
+                {" "}
+                <span className="font-bold">System Testing : </span> After
+                installation, we rigorously test the system to ensure it
+                operates at peak performance.
+              </li>
+              <li>
+                {" "}
+                <span className="font-bold">
+                  Post-Installation Support :{" "}
+                </span>{" "}
+                We provide ongoing support and maintenance to ensure your air
+                conditioning system remains in excellent condition.
+              </li>
             </ul>
           </div>
         </div>

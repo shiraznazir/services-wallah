@@ -14,7 +14,7 @@ const Body: React.FC = () => {
   };
 
   return (
-    <div className="px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="px-4 pt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Left Section */}
       <div className="pt-20 md:h-screen flex justify-center items-center">
         <div className="flex flex-col font-bold text-xl text-center md:text-left">
@@ -52,7 +52,7 @@ const Body: React.FC = () => {
       {/* Right Section */}
       <div className="hidden md:grid grid-rows-6 grid-cols-6 gap-3 h-screen pt-10">
         {/* Main Image */}
-        <div className="relative animate-zoomIn row-span-5 col-span-3">
+        <div className="relative animate-zoomIn row-span-6 col-span-3">
           <Image
             className="rounded-l-xl"
             layout="fill"
@@ -70,7 +70,7 @@ const Body: React.FC = () => {
           />
         </div>
         {/* Bottom Right Image */}
-        <div className="relative animate-zoomIn row-span-2 col-span-3">
+        <div className="relative animate-zoomIn row-span-3 col-span-3">
           <Image
             className="rounded-br-xl"
             layout="fill"

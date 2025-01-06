@@ -49,16 +49,16 @@ const Contact = () => {
                   <span className="font-bold">📞 Phone: </span>
                   <a
                     href="tel:+919837305499"
-                    className="hover:text-blue-600 dark:hover:text-blue-400 underline"
+                    className="hover:text-blue-600 no-underline dark:hover:text-blue-400"
                   >
-                    +91 9837305499
+                    +91 9354063823
                   </a>
                 </li>
                 <li>
                   <span className="font-bold">📧 Email: </span>
                   <a
                     href="mailto:info@servicewalah.com"
-                    className="hover:text-blue-600 dark:hover:text-blue-400 underline"
+                    className="hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     info@servicewalah.com
                   </a>
