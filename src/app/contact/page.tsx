@@ -7,9 +7,9 @@ import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
   return (
-    <div className="px-4 sm:px-8 lg:px-20 py-5">
+    <div className="py-5">
       {/* Breadcrumb */}
-      <BreadCrumbComp title="Home" subTitle="Contact Us" />
+      <BreadCrumbComp title="Home" subTitle="Contact Us" subTitle1="" />
       <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
 
       <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">

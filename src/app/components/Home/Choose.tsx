@@ -4,24 +4,7 @@ import React from "react";
 import CustomCard from "@/app/components/CustomCard";
 
 const data = [
-  {
-    title: "Experienced Engineers",
-    img: "/images/engineer.jpeg",
-    description:
-      "Our certified professionals have years of experience installing all types of air conditioning systems, including split, window, and central AC units.",
-  },
-  {
-    title: "Customized Solutions",
-    img: "/images/engineer.jpeg",
-    description:
-      "We understand that every space is unique. Our team assesses your space to recommend and install the perfect air conditioning solution tailored to your needs.",
-  },
-  {
-    title: "Affordable Pricing",
-    img: "/images/engineer.jpeg",
-    description:
-      "We offer competitive rates without compromising on quality. Transparency in pricing ensures you get value for every rupee spent.",
-  },
+
   {
     title: "Energy-Efficient Installation",
     img: "/images/engineer.jpeg",
@@ -40,12 +23,30 @@ const data = [
     description:
       "We prioritize your needs and are committed to delivering personalized solutions and exceptional service.",
   },
+  {
+    title: "Experienced Engineers",
+    img: "/images/engineer.jpeg",
+    description:
+      "Our certified professionals have years of experience installing all types of air conditioning systems, including split, window, and central AC units.",
+  },
+  {
+    title: "Customized Solutions",
+    img: "/images/engineer.jpeg",
+    description:
+      "We understand that every space is unique. Our team assesses your space to recommend and install the perfect air conditioning solution tailored to your needs.",
+  },
+  {
+    title: "Affordable Pricing",
+    img: "/images/engineer.jpeg",
+    description:
+      "We offer competitive rates without compromising on quality. Transparency in pricing ensures you get value for every rupee spent.",
+  },
 ];
 
 const Choose = () => {
   return (
     <section id="Choose" className="">
-      <div className="py-5 px-4 text-center">
+      <div className="py-5 text-center">
         <h1 className="pt-4 pb-2 text-3xl font-bold animate-slideIn md:text-4xl lg:text-5xl">
           Why Choose Service Walah?
         </h1>

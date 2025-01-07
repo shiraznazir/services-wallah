@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import BookACall from "@/app/components/BookACall";
+import ActionButtons from "../ActionsButton";
 
 const Body: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,9 +15,9 @@ const Body: React.FC = () => {
   };
 
   return (
-    <div className="px-4 pt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Left Section */}
-      <div className="pt-20 md:h-screen flex justify-center items-center">
+      <div className="pt-10 md:h-screen flex justify-center items-center">
         <div className="flex flex-col font-bold text-xl text-center md:text-left">
           <motion.h1
             className="text-3xl md:text-4xl font-bold"
@@ -81,7 +82,7 @@ const Body: React.FC = () => {
       </div>
 
       {/* Mobile Images Section */}
-      <div className="grid md:hidden grid-cols-2 gap-4">
+      <div className="px-10 grid md:hidden grid-cols-2 gap-4">
         <div className="relative w-full h-40">
           <Image
             className="rounded-xl"
@@ -108,6 +109,7 @@ const Body: React.FC = () => {
         </div>
       </div>
       <BookACall isOpen={isOpen} onClose={onClose} />
+      <ActionButtons />
     </div>
   );
 };

@@ -1,14 +1,13 @@
 import { NextConfig } from 'next';
-/** @type {import('next').NextConfig} */
 
+/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  output: 'export', 
-  domain: 'https://servicewalah.com/',
+  // output: 'export',
+  // domain: 'https://servicewalah.com/',
   images: {
     unoptimized: true,
   },
   reactStrictMode: true,
-  webpack5: true, 
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -36,11 +35,25 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/about',
-        destination: '/service',
+        destination: '/about',
         permanent: true,
       },
     ];
-  },  
+  },
+  
+  async headers() {
+    return [
+      {
+        source: '/service',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

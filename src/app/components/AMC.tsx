@@ -39,12 +39,12 @@ const BenefitsData = [
   },
 ];
 
-const Repair = () => {
+const AMC = () => {
   return (
-    <section id="repair" className="py-10 px-4 sm:px-6 lg:px-8">
+    <section id="repair" className="py-10 sm:px-6 lg:px-8">
       {/* Header Section */}
       <div className="my-4 bg-gray-100 dark:bg-gray-800 p-6 rounded max-w-4xl mx-auto">
-        <h2 className="my-4 font-bold text-xl sm:text-2xl text-gray-800 dark:text-gray-100">
+        <h2 className="my-4 text-center font-bold text-xl sm:text-2xl text-gray-800 dark:text-gray-100">
           Air Conditioner AMC Services by Service Walah
         </h2>
         <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300">
@@ -131,4 +131,4 @@ const Repair = () => {
   );
 };
 
-export default Repair;
+export default AMC;

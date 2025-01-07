@@ -55,14 +55,7 @@ const Services: React.FC = () => {
 
   // Navigation Handler
   const handleNavigation = (title: string) => {
-    router.push("/service");
-    
-    setTimeout(() => {
-      const destinationDiv = document.getElementById(title);
-      if (destinationDiv) {
-        destinationDiv.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
+    router.push(`/service/${title.toLowerCase()}`);
   };
 
   return (

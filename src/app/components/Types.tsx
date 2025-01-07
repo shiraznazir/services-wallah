@@ -4,7 +4,7 @@ import React from "react";
 
 const Types = () => {
   return (
-    <section className="py-4 px-4 sm:px-6 lg:px-8">
+    <section className="py-4 sm:px-6 lg:px-8">
       <div className="my-4 bg-gray-100 dark:bg-gray-800 p-6 rounded max-w-4xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">
           Types of Air Conditioners

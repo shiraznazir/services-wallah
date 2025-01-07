@@ -27,9 +27,9 @@ const data = [
 
 const About = () => {
   return (
-    <div className="px-4 sm:px-8 lg:px-20 py-5">
+    <div className="py-5">
       {/* Breadcrumb */}
-      <BreadCrumbComp title="Home" subTitle="About Us" />
+      <BreadCrumbComp title="Home" subTitle="About Us" subTitle1="" />
 
       {/* Main Heading */}
       <div className="my-4 bg-gray-100 dark:bg-gray-800 p-6 rounded">
