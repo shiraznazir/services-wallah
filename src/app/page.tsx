@@ -16,7 +16,7 @@ const Home = () => {
   if (!mounted) return null;
 
   return (
-    <div className={`px-4 sm:px-8 md:px-12 lg:px-20 xl:px-24 max-w-screen-xl mx-auto`}>
+    <div className={`max-w-screen-xl mx-auto`}>
       <Body />
       <Services />
       <Choose />

@@ -23,37 +23,37 @@ const nextConfig: NextConfig = {
   publicRuntimeConfig: {
     STATIC_PATH: '/static',
   },
-  async rewrites() {
-    return [
-      {
-        source: '/service',
-        destination: '/service/1',
-      },
-    ];
-  },
-  async redirects() {
-    return [
-      {
-        source: '/about',
-        destination: '/about',
-        permanent: true,
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/service',
+  //       destination: '/service/1',
+  //     },
+  //   ];
+  // },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/about',
+  //       destination: '/about',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
   
-  async headers() {
-    return [
-      {
-        source: '/service',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=3600',
-          },
-        ],
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/service',
+  //       headers: [
+  //         {
+  //           key: 'Cache-Control',
+  //           value: 'public, max-age=3600',
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;

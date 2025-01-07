@@ -2,7 +2,7 @@
 
 import React from "react";
 import ContactForm from "./ContactForm";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const BookACall = ({
   isOpen,
@@ -14,6 +14,7 @@ const BookACall = ({
   return (
     <div className="flex justify-center items-center animate-slideIn">
       <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+        <DialogTitle></DialogTitle>
         <DialogContent className="sm:max-w-[425px]">
           <ContactForm />
         </DialogContent>

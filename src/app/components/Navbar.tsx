@@ -51,8 +51,8 @@ const DropdownList = () => {
   );
 };
 
-const MenubarDemo = () => {
-  
+
+const MenubarDesktop = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const onClose = () => {
@@ -61,25 +61,41 @@ const MenubarDemo = () => {
 
   return (
     <div className="hidden md:flex gap-10 p-2">
-          <Link href="/" className="font-bold">
-            Home
-          </Link>
-          <Link href="/service" className="font-bold">
-            Services
-          </Link>
-          <Link href="/about" className="font-bold">
-            About Us
-          </Link>
-          <Link href="/contact" className="font-bold">
-            Contact Us
-          </Link>
-          <div onClick={()=>setIsOpen(!isOpen)} className="cursor-pointer font-bold">
-            Enquiry
-          </div>
-          <BookACall isOpen={isOpen} onClose={onClose} />
+      <Link
+        href="/"
+        className="font-bold transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
+      >
+        Home
+      </Link>
+      <Link
+        href="/service"
+        className="font-bold transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
+      >
+        Services
+      </Link>
+      <Link
+        href="/about"
+        className="font-bold transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
+      >
+        About Us
+      </Link>
+      <Link
+        href="/contact"
+        className="font-bold transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
+      >
+        Contact Us
+      </Link>
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className="cursor-pointer font-bold transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
+      >
+        Enquiry
+      </div>
+      <BookACall isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };
+
 
 const Navbar = () => {
   return (
@@ -101,7 +117,7 @@ const Navbar = () => {
       </div></Link> */}
 
       {/* Desktop Menu */}
-      <MenubarDemo />
+      <MenubarDesktop />
 
       {/* Mobile Menu and Additional Controls */}
       <div className="flex items-center gap-5">

@@ -58,6 +58,7 @@ const Body: React.FC = () => {
             className="rounded-l-xl"
             layout="fill"
             src="/images/a1.jpeg"
+            priority
             alt="Main air conditioning service image"
           />
         </div>
