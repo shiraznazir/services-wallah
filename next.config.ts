@@ -2,12 +2,11 @@ import { NextConfig } from 'next';
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  // output: 'export',
-  // domain: 'https://servicewalah.com/',
+  output: 'export',
+  domain: 'https://servicewalah.com/',
   images: {
     unoptimized: true,
   },
-  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -23,23 +22,16 @@ const nextConfig: NextConfig = {
   publicRuntimeConfig: {
     STATIC_PATH: '/static',
   },
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/service',
-  //       destination: '/service/1',
-  //     },
-  //   ];
-  // },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/about',
-  //       destination: '/about',
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
+  reactStrictMode: true,
+  trailingSlash: false, // Adjust if you have issues with slashes in URLs
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: '/index.html', // Fallback for static hosting
+      },
+    ];
+  },
   
   // async headers() {
   //   return [

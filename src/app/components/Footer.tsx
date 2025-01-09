@@ -22,17 +22,17 @@ const Footer = () => {
           {/* Company Section */}
           <div>
             <h1 className="font-bold text-xl">Company</h1>
-            <ul className="py-4 space-y-2 font-thin">
-              <li>
+            <ul className="py-4 space-y-2 font-normal">
+              <li className="cursor-pointer hover:text-blue-600">
                 <Link href="/about">About Us</Link>
               </li>
-              <li>
+              <li className="cursor-pointer hover:text-blue-600">
                 <Link href="/terms-and-conditions">Terms & Conditions</Link>
               </li>
-              <li>
+              <li className="cursor-pointer hover:text-blue-600">
                 <Link href="/privacy-policy">Privacy Policy</Link>
               </li>
-              <li>
+              <li className="cursor-pointer hover:text-blue-600">
                 <Link href="/career">Careers</Link>
               </li>
             </ul>
@@ -41,15 +41,14 @@ const Footer = () => {
           {/* For Customers Section */}
           <div>
             <h1 className="font-bold text-xl">For Customers</h1>
-            <ul className="py-4 space-y-2 font-thin">
-              <li>
+            <ul className="py-4 space-y-2 font-normal">
+              <li className="cursor-pointer hover:text-blue-600">
                 <Link href="/review">SW Reviews</Link>
               </li>
-              <li>Categories Near You</li>
-              <li>
+              <li className="cursor-pointer hover:text-blue-600">
                 <Link href="/blog">Blog</Link>
               </li>
-              <li>
+              <li className="cursor-pointer hover:text-blue-600">
                 <Link href="/contact">Contact Us</Link>
               </li>
             </ul>
@@ -61,7 +60,7 @@ const Footer = () => {
             <ul className="py-4 space-y-2 font-thin">
               <li
                 onClick={handleRegisterClick}
-                className="cursor-pointer hover:text-blue-600"
+                className="cursor-pointer font-normal hover:text-blue-600"
               >
                 Register as a Professional
               </li>
@@ -75,7 +74,7 @@ const Footer = () => {
               {/* Facebook */}
               <li>
                 <a
-                  href="https://www.facebook.com/servicewalah"
+                  href="https://www.facebook.com/profile.php?id=61571662593094"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800"
@@ -123,7 +122,7 @@ const Footer = () => {
               {/* LinkedIn */}
               <li>
                 <a
-                  href="https://www.linkedin.com/company/service-walah"
+                  href="https://www.linkedin.com/company/service-walah/?viewAsMember=true"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-700 hover:text-blue-900"
@@ -145,6 +144,26 @@ const Footer = () => {
                   </svg>
                 </a>
               </li>
+              {/* Twitter */}
+              <li>
+                <a
+                  href="https://x.com/ServiceWalah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-blue-700"
+                >
+                  {/* SVG for Twitter */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path d="M23.643 4.937c-.835.37-1.73.623-2.675.735a4.657 4.657 0 002.048-2.57 9.348 9.348 0 01-2.95 1.13 4.675 4.675 0 00-7.956 4.264A13.26 13.26 0 011.64 3.15a4.653 4.653 0 001.448 6.216 4.603 4.603 0 01-2.114-.584v.06a4.674 4.674 0 003.742 4.577 4.723 4.723 0 01-2.106.08 4.675 4.675 0 004.364 3.246A9.378 9.378 0 010 19.542a13.204 13.204 0 007.155 2.097c8.593 0 13.295-7.132 13.295-13.32 0-.204 0-.408-.014-.612A9.473 9.473 0 0024 4.557a9.3 9.3 0 01-2.357.65z" />
+                  </svg>
+                </a>
+              </li>
+
               {/* YouTube */}
               <li>
                 <a

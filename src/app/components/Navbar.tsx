@@ -91,7 +91,7 @@ const MenubarDesktop = () => {
       >
         Enquiry
       </div>
-      <BookACall isOpen={isOpen} onClose={onClose} />
+      <BookACall label="Enquiry Form" isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };
@@ -104,19 +104,6 @@ const Navbar = () => {
     >
       {/* Logo Section */}
       <Logo />
-      {/* <Link href={"/"}>
-      <div className={`dark:bg-white dark:text-black rounded-lg p-2`}>
-        <Image
-          className="animate-slideIn"
-          width={100}
-          height={100}
-          src={"/images/logo.png"}
-          alt="Company Logo"
-          priority
-        />
-      </div></Link> */}
-
-      {/* Desktop Menu */}
       <MenubarDesktop />
 
       {/* Mobile Menu and Additional Controls */}

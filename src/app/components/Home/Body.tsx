@@ -109,7 +109,7 @@ const Body: React.FC = () => {
           />
         </div>
       </div>
-      <BookACall isOpen={isOpen} onClose={onClose} />
+      <BookACall label="Book a call" isOpen={isOpen} onClose={onClose} />
       <ActionButtons />
     </div>
   );
