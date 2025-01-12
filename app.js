@@ -20,10 +20,7 @@ app.use(cors());
 // MongoDB connection
 const uri = process.env.MONGO_URI;
 
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(uri)
   .then(() => console.log('✅ MongoDB connected successfully'))
   .catch(err => {
     console.error('❌ MongoDB connection error:', err.message);
@@ -35,7 +32,7 @@ app.use('/api/v1/enquiry', require('./routes/enquiry'));
 app.use('/api/v1/auth', require('./routes/auth'));
 
 // Start server
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 7001;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
